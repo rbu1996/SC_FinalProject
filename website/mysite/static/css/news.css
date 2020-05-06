@@ -1,0 +1,21 @@
+.main {
+    padding-top: 30px;
+}
+.main .row {
+    margin-bottom: 20px;
+}
+
+.author {
+    color: gray;
+}
+
+.time {
+    color: darkgray;
+}
+
+br {
+    content: "";
+    margin: 2em;
+    display: block;
+    font-size: 24%;
+}

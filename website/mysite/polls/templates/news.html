@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Coronavirus Disease (COVID-19) News{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <!-- main -->
+    <div class="container main">
+        <div class="row">
+            <div class="col-12 col-md-9">
+                <h1>{{ doc.title }}</h1>
+                <p><a href="{{ doc.link }}" target="_blank">Read source</a></p>
+                <p>
+                    {% if doc.author %}
+                    <span class="author">Author: {{ doc.author|join:"" }}</span> | 
+                    {% endif %}
+                    <span class="time">{{ doc.time }}</span></p>
+                <p>{{ doc.content |linebreaks}}</p>
+            </div>
+
+            <div class="col-12 col-md-3">
+                <h4 style="margin-top: 30px;margin-bottom: 30px;">Related News</h4>
+                {% for doc in sim_docs %}
+                <div class="row">
+                    <div class="col-12">
+                        <h5><a href="{% url 'news' news_id=doc.newsID %}">{{ doc.title }}</a></h3>
+                        <p>
+                            <span class="time">{{ doc.time }}</span></p>
+                        <p>{{ doc.content |truncatechars:120}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+          </div>
+    </div>
+    <!-- //main -->
+{% endblock %}

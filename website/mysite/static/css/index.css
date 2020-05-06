@@ -1,0 +1,80 @@
+/*-- main --*/
+.main{
+	/* width: 35%;
+	margin: 8em auto 0; */
+	
+    height: 100vh;
+    padding-top: 8em;
+	
+	font-family: 'Cabin', sans-serif !important;
+	background:url(../images/banner.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main h1{
+	color: #50dbe2;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0 0 1.5em;
+}
+.main input[type="text"],.main input[type="password"]{
+	outline: none;
+    border: 1px solid #FFF;
+    background: #dcdcdc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    padding: 15px 10px;
+    width: 100%;
+    font-size: 1.3em;
+    color: #7e8fad;
+    text-align: center;
+	font-family: 'Syncopate', sans-serif;
+	margin-bottom: 30px;
+}
+.main input[type="password"]{
+	margin:1.5em 0;
+}
+.main input[type="submit"]{
+	outline:none;
+	border:1px solid #808080;
+	background:#808080;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	-ms-border-radius:5px;
+	padding:15px 10px;
+	width:100%;
+	color:#f0f8ff;
+	font-size:1.5em;
+	font-family: 'Syncopate', sans-serif;
+	cursor:pointer;
+}
+.main input[type="submit"]:hover{
+	background:#808080;
+	color:#000000;
+	border: 1px solid #FFF;
+}
+.main form {
+	text-align: center;
+}
+
+.form-inline {
+	display: none;
+}
+@media (min-width: 767.98px) {
+	.main input[type="text"], .main input[type="submit"]{
+		width: 400px;
+	}
+}
+
+.card-body p {
+    margin: 0;
+	margin-bottom: 5px;
+	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

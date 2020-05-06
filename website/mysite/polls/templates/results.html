@@ -1,0 +1,28 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{query}} | Coronavirus News{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/results.css' %}">
+{% endblock %}
+
+{% block search %}{{query}}{% endblock %}
+{% block content %}
+    <!-- main -->
+    <div class="container main">
+        <h4 style="margin-bottom: 20px;">Search results for "{{query}}"</h4>
+        {% for doc in docs %}
+        <div class="row">
+            <div class="col-12">
+                <h3><a href="{% url 'news' news_id=doc.newsID %}">{{ doc.title }}</a></h3>
+                <p>
+                    {% if doc.author %}
+                    <span class="author">Author: {{ doc.author|join:""|truncatechars:50 }}</span> | 
+                    {% endif %}
+                    <span class="time">{{ doc.time }}</span></p>
+                <p>{{ doc.content |truncatechars:200}}</p>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+    <!-- //main -->
+{% endblock %}

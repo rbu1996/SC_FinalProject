@@ -1,0 +1,26 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block title %}Coronavirus Disease (COVID-19) News{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <!-- main -->
+    <div class="container">
+        <div class='row main'>
+            <div class="col">
+                <h1>
+                    Coronavirus Disease (COVID-19) News
+                </h1>
+
+                <form action="/results" method="get">
+                    <input type="text" placeholder="Enter your query" name="q"> <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- //main -->
+{% endblock %}
