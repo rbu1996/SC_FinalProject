@@ -5,6 +5,7 @@ Ride Bu
 
 ### System Requirements:
 * Please check requirements.txt. 
+* The website framework is Django. 
 
 ### How to run?
 * Run:
